@@ -3,7 +3,7 @@
 ## Unit Testing
 JUnit testing is important because it catches bugs early, ensuring code reliability. It simplifies debugging by verifying components work correctly. Automated testing also boosts productivity and keeps the code stable.
 
-```java
+``` java
 
 @Test
     public void testSquareArea() {
