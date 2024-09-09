@@ -32,8 +32,8 @@ JUnit testing is important because it catches bugs early, ensuring code reliabil
 ```
 
 ## Moblie Applications with Flutter
+[Video about our App](https://www.youtube.com/watch?v=g4dTerZpAcQ&list=LL&index=23&ab_channel=HaydenRoof)
 
-https://www.youtube.com/watch?v=g4dTerZpAcQ&list=LL&index=23&ab_channel=HaydenRoof
 
 ``` Dart
     return CupertinoPageScaffold(
