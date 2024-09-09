@@ -1,6 +1,5 @@
-# Meet Connor!
+# Connor Burkart Code Examples!
 
-# Code Examples 
 ## Unit Testing
 Explanation here 
 
