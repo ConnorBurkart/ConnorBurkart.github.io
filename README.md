@@ -34,8 +34,9 @@ JUnit testing is important because it catches bugs early, ensuring code reliabil
 ## Moblie Applications with Flutter
 [Video about our App](https://www.youtube.com/watch?v=g4dTerZpAcQ&list=LL&index=23&ab_channel=HaydenRoof)
 
+Dart is the primary language used for building apps within the Flutter framework. It allows for fast development with a rich set of pre-built widgets and tools. Using Dart with Flutter enables smooth, high-performance mobile applications across multiple platforms, like Android and iOS, from a single codebase.
 
-``` Dart
+```java
     return CupertinoPageScaffold(
       child: Column(
         children: <Widget>[
