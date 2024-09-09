@@ -1,7 +1,7 @@
 # Connor Burkart Code Examples!
 
 ## Unit Testing
-Explanation here 
+JUnit testing is important because it catches bugs early, ensuring code reliability. It simplifies debugging by verifying components work correctly. Automated testing also boosts productivity and keeps the code stable.
 
 ```java
 
