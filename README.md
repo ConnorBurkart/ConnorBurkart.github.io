@@ -161,7 +161,135 @@ void OurCPSC3120Tree::balanceTree(){
 }
 ```
 
-### Hash Mapping
+## Merge Sort
 
+This mergeSort function splits the input vector into two halves (alpha and beta), sorts each using std::sort, and then merges them into a final sorted vector omega. It compares elements from alpha and beta, adding the smaller one to omega and appending any remaining elements afterward. However, it incorrectly uses = instead of == in two while loop conditions, which should be fixed for proper comparison.
+
+``` c
+template <class T>
+std::vector<T> mergeSort(std::vector<T> lst)
+{
+    // The two parts of the vector 
+    vector<T> alpha;
+    vector<T> beta;
+
+    // This splits the vector in half
+    for (int i = 0; i < lst.size(); i++)
+    {
+        if(i < (lst.size()/2))
+        {
+            alpha.push_back(lst[i]);
+        }
+        else if(i >= (lst.size()/2))
+        {
+            beta.push_back(lst[i]);
+        }
+    }
+    // This sorts them
+    sort(alpha.begin(),alpha.end());
+    sort(beta.begin(),beta.end());
+
+    // This is the final vector
+    vector<T> omega;
+
+    // i is for alpha and j is for beta
+    int i = 0;
+    int j = 0;
+
+    // Runs until the vectors are basically ran through
+    while((alpha.size() != i) && (beta.size() != j))
+    {
+
+        // if alpha is less add it
+        if(alpha[i] < beta[j])
+        {
+            omega.push_back(alpha[i]);
+            i++;
+        }
+        // if beta is less add it
+        else if(alpha[i] > beta[j])
+        {
+            omega.push_back(beta[j]);
+            j++;
+        }
+
+    }
+
+    // if i is equal to alpha size then make sure beta is empty
+    if(i == alpha.size())
+    {
+    
+        while(i = alpha.size() && j != beta.size())
+        {
+            omega.push_back(beta[j]);
+            j++;
+        }
+
+    }
+    // if j is equal to beta size then make sure beta is empty
+    else if(j == beta.size())
+    {
+        while(j = beta.size() && i != alpha.size())
+        {
+
+            omega.push_back(alpha[i]);
+            i++;
+        }
+    }
+
+    return omega;
+
+}
+```
+
+## Binary 
+
+This binarySearch function searches for a target value in a sorted vector by repeatedly halving the search range until the target is found or the range is exhausted. It compares the target with the middle element of the current range, adjusting the low or high index based on the comparison. If the target is found, the index is returned; otherwise, the function returns -1.
+
+``` c
+template <class T>
+int binarySearch(std::vector<T> data, T target)
+{
+
+    int lowIndex = 0;
+    int highIndex = data.size();
+    int midIndex = (highIndex + lowIndex) / 2;
+
+    int i = 0;
+
+    while (midIndex != highIndex || midIndex != lowIndex)
+    {
+
+        // The midIndex has to equal target for it to return
+        if(data[midIndex] == target)
+        {
+            return midIndex;
+        }
+        // If the value is less than target move ut up
+        else if(data[midIndex] < target)
+        {
+            lowIndex = midIndex + 1;
+            midIndex = (highIndex + lowIndex) / 2;
+
+        }
+        // If the value is more than target move it down
+        else if(data[midIndex] > target)
+        {
+            highIndex = highIndex - 1;
+            midIndex = (highIndex + lowIndex) / 2;
+        }
+
+
+    }
+    if(data[midIndex] == target)
+    {
+        return midIndex;
+    }
+
+
+    return -1;
+
+}
+```
 
 
