@@ -1,4 +1,4 @@
-# Connor Burkart Code Examples!
+# Code Examples
 
 ## Moblie Applications with Flutter
 [Video about our App](https://www.youtube.com/watch?v=g4dTerZpAcQ&list=LL&index=23&ab_channel=HaydenRoof)
