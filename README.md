@@ -1,36 +1,5 @@
 # Connor Burkart Code Examples!
 
-## Unit Testing
-JUnit testing is important because it catches bugs early, ensuring code reliability. It simplifies debugging by verifying components work correctly. Automated testing also boosts productivity and keeps the code stable.
-
-``` java
-
-@Test
-    public void testSquareArea() {
-        // Test case for area of a square (side^2)
-        double sideLength = 5;
-        double expectedArea = sideLength * sideLength;
-        assertEquals(expectedArea, 25, "Square area calculation is incorrect");
-    }
-
-    @Test
-    public void testTriangleHeight() {
-        // Test case for height of a triangle (2 * area / base)
-        double base = 10;
-        double area = 30;
-        double expectedHeight = (2 * area) / base;
-        assertEquals(expectedHeight, 6, "Triangle height calculation is incorrect");
-    }
-
-    @Test
-    public void testCircleCircumference() {
-        // Test case for circumference of a circle (2 * π * radius)
-        double radius = 7;
-        double expectedCircumference = 2 * Math.PI * radius;
-        assertEquals(expectedCircumference, 2 * Math.PI * 7, "Circle circumference calculation is incorrect");
-    }
-```
-
 ## Moblie Applications with Flutter
 [Video about our App](https://www.youtube.com/watch?v=g4dTerZpAcQ&list=LL&index=23&ab_channel=HaydenRoof)
 
@@ -78,6 +47,37 @@ Dart is the primary language used for building apps within the Flutter framework
                   child: const Text(
                     'Forget password?',
                     style: TextStyle(color: Colors.black, decoration: TextDecoration.underline),
+```
+
+## Unit Testing
+JUnit testing is important because it catches bugs early, ensuring code reliability. It simplifies debugging by verifying components work correctly. Automated testing also boosts productivity and keeps the code stable.
+
+``` java
+
+@Test
+    public void testSquareArea() {
+        // Test case for area of a square (side^2)
+        double sideLength = 5;
+        double expectedArea = sideLength * sideLength;
+        assertEquals(expectedArea, 25, "Square area calculation is incorrect");
+    }
+
+    @Test
+    public void testTriangleHeight() {
+        // Test case for height of a triangle (2 * area / base)
+        double base = 10;
+        double area = 30;
+        double expectedHeight = (2 * area) / base;
+        assertEquals(expectedHeight, 6, "Triangle height calculation is incorrect");
+    }
+
+    @Test
+    public void testCircleCircumference() {
+        // Test case for circumference of a circle (2 * π * radius)
+        double radius = 7;
+        double expectedCircumference = 2 * Math.PI * radius;
+        assertEquals(expectedCircumference, 2 * Math.PI * 7, "Circle circumference calculation is incorrect");
+    }
 ```
 ## Fitts Law
 This program simulates target selection tasks with varying sizes and distances. It measures the time taken and shows that smaller, farther targets take longer to hit. The results confirm Fitts' Law by illustrating the relationship between distance, size, and movement time.
@@ -242,7 +242,7 @@ std::vector<T> mergeSort(std::vector<T> lst)
 }
 ```
 
-## Binary 
+## Binary Search 
 
 This binarySearch function searches for a target value in a sorted vector by repeatedly halving the search range until the target is found or the range is exhausted. It compares the target with the middle element of the current range, adjusting the low or high index based on the comparison. If the target is found, the index is returned; otherwise, the function returns -1.
 
