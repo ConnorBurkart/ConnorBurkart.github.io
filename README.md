@@ -88,4 +88,80 @@ The data shows that smaller, farther targets take longer to click. For instance,
 
 ![image](https://github.com/user-attachments/assets/172ba8c5-bb0b-43da-82f3-677eeeb8da1b)
 
+## AVL Trees
+
+An AVL tree is a self-balancing binary search tree that maintains a height difference of at most one between subtrees. This balancing ensures efficient 
+𝑂(log𝑛)O(logn) operations for insertion, deletion, and lookup. AVL trees are important because they prevent performance degradation due to tree imbalance.
+The insert function adds a value to the tree, creating left or right child nodes if needed, and recursively places the value in the correct subtree. After each insertion, it calls balanceTree() to maintain the AVL tree's balance.
+
+``` c++
+void OurCPSC3120Tree::insert( int val ){
+  if( !getValue() ){
+    setValue( val );
+  }
+  else if( val < getValue() && !getLeft() ){
+    left = new OurCPSC3120Tree();
+    getLeft()->setParent( *this );
+    getLeft()->insert( val );
+  }
+  else if( val > getValue() && !getRight() ){
+    right = new OurCPSC3120Tree();
+    getRight()->setParent( *this );
+    getRight()->insert( val );
+  }
+  else if( val < getValue() ){
+    getLeft()->insert( val );
+  }
+  else{
+    getRight()->insert( val );
+  }
+
+  balanceTree();
+  
+  return;
+}
+```
+
+The balanceTree() function checks the height of the left and right subtrees to determine if the tree is unbalanced. It applies specific rotations (left, right, left-right, or right-left) based on the imbalance to restore balance. These rotations adjust the structure of the tree to maintain the AVL tree property, ensuring that the height difference between subtrees remains minimal.
+
+``` c++
+void OurCPSC3120Tree::balanceTree(){
+  if( !getRight() && getLeft() && !getLeft()->getLeft() && getLeft()->getHeight() >= 2 ){
+    rotateLeftRight();
+    return;
+  }
+  if( !getRight() && getLeft() && getLeft()->getLeft() && getLeft()->getRight() && getLeft()->getRight()->getHeight() > getLeft()->getLeft()->getHeight() ){
+    rotateLeftRight();
+    return;
+  }
+  if( !getLeft() && getRight() && !getRight()->getRight() && getRight()->getHeight() >= 2 ){
+    rotateRightLeft();
+    return;
+  }
+  if( !getLeft() && getRight() && getRight()->getRight() && getRight()->getLeft() && getRight()->getLeft()->getHeight() > getRight()->getRight()->getHeight() ){
+    rotateRightLeft();
+    return;
+  }
+  if( !getLeft() && getRight() && getRight()->getHeight() >= 2 ){
+    rotateLeft();
+    return;
+  }
+  if( getLeft() && getRight() && getRight()->getHeight() >= ( getLeft()->getHeight() + 2 ) ){
+    rotateLeft();
+    return;
+  }
+  if( !getRight() && getLeft() && getLeft()->getHeight() >= 2 ){
+    rotateRight();
+    return;
+  }
+  if( getRight() && getLeft() && getLeft()->getHeight() >= ( getRight()->getHeight() + 2 ) ){
+    rotateRight();
+    return;
+  }
+}
+```
+
+### Hash Mapping
+
+
 
