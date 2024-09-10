@@ -79,4 +79,13 @@ Dart is the primary language used for building apps within the Flutter framework
                     'Forget password?',
                     style: TextStyle(color: Colors.black, decoration: TextDecoration.underline),
 ```
+## Fitts Law
+This program simulates target selection tasks with varying sizes and distances. It measures the time taken and shows that smaller, farther targets take longer to hit. The results confirm Fitts' Law by illustrating the relationship between distance, size, and movement time.
+
+![image](https://github.com/user-attachments/assets/8ecb75cf-aa7d-4f43-8392-c4ef3fc1920c)'
+
+The data shows that smaller, farther targets take longer to click. For instance, Trial 1 took 919 ms for a 129-pixel target at 388 pixels away, while Trial 4 was faster with a larger, closer target. This is important for designing efficient user interfaces based on Fitts' Law.
+
+![image](https://github.com/user-attachments/assets/172ba8c5-bb0b-43da-82f3-677eeeb8da1b)
+
 
