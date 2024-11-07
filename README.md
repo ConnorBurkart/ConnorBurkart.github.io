@@ -1,6 +1,6 @@
 # Connor Burkart Code Examples
 
-[Connors Resume Here](https://drive.google.com/file/d/1kImPK0X4KcDRj5FQyxBomSNlEnk8BxYr/view?usp=sharing)
+[For Connors Resume Click Here](https://drive.google.com/file/d/1kImPK0X4KcDRj5FQyxBomSNlEnk8BxYr/view?usp=sharing)
 
 ## Moblie Applications with Flutter
 [Video about our App](https://www.youtube.com/watch?v=g4dTerZpAcQ&list=LL&index=23&ab_channel=HaydenRoof)
